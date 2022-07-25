@@ -1,0 +1,31 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: api
+  labels:
+    app: api
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: api
+
+  template:
+    metadata:
+      labels:
+        app: api
+
+    spec:
+      resources:
+        requests:
+          cpu: 250m
+
+      containers:
+        - name: api-container
+          image: 029174582047.dkr.ecr.ap-southeast-1.amazonaws.com/gitops-api-endpoint:latest
+          ports:
+            - containerPort: 8080

@@ -1,0 +1,14 @@
+env:
+  node: true
+
+extends:
+  - plugin:unicorn/recommended
+  - plugin:prettier/recommended
+
+rules:
+  unicorn/prevent-abbreviations:
+    - error
+    - replacements:
+        env: false
+        props: false
+        params: false

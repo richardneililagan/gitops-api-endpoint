@@ -1,0 +1,19 @@
+{
+  "name": "workshop-gitops",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint . -f stylish",
+    "start": "node src/index.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "prettier": "^2.7.1"
+  }
+}
